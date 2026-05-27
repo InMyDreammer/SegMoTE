@@ -19,22 +19,6 @@ with:
 pip install -r requirements.txt
 ```
 
-Use a CUDA-enabled PyTorch installation appropriate for your machine.
-
-## Data
-
-Each dataset is expected under `dataset/<DATASET_NAME>/` with a
-`dataset.json` file and the image/annotation paths referenced by that file.
-For multiple datasets, provide their names after `--dataset_list`.
-
-```text
-dataset/
-`-- BTCV/
-    |-- dataset.json
-    |-- image/
-    |-- label/
-    `-- imask/
-```
 
 ## Training
 
@@ -47,9 +31,6 @@ python train.py \
   --sam_checkpoint /path/to/initialization.pth \
   --task_name segmote_train
 ```
-
-For distributed execution, additionally pass `--dist --multi_gpu` and the
-desired `--gpu_ids`.
 
 
 ## Citation And License
