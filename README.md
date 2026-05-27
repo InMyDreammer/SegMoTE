@@ -88,8 +88,8 @@ scientific Python packages.
 Two checkpoint files are required for evaluation:
 
 ```text
-checkpoints/IMISNet-B.pth
-checkpoints/segmote_best.pth
+checkpoints/sam_b.pth
+checkpoints/segmote.pth
 ```
 
 | Checkpoint | Usage |
@@ -100,7 +100,7 @@ checkpoints/segmote_best.pth
 Download the checkpoints from Baidu Netdisk:
 
 ```text
-Link: <BAIDU_NETDISK_DOWNLOAD_LINK>
+Link: [<BAIDU_NETDISK_DOWNLOAD_LINK>](https://pan.baidu.com/s/1HcmqPiwpWgnYr4CMf6Y9Pg)   Password：eank
 Extraction code: <BAIDU_NETDISK_EXTRACTION_CODE>
 ```
 
