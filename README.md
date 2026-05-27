@@ -3,14 +3,13 @@
 # SegMoTE: Token-Level Mixture of Experts for Medical Image Segmentation
 
 **Yujie Lu<sup>1*</sup>, Jingwen Li<sup>2*</sup>, Sibo Ju<sup>3</sup>, Yanzhou Su<sup>4</sup>,  
-He Yao<sup>1</sup>, Yisong Liu<sup>1</sup>, Min Zhu<sup>1&dagger;</sup>, Junlong Cheng<sup>1&dagger;</sup>**
+He Yao<sup>1</sup>, Yisong Liu<sup>1</sup>, Min Zhu<sup>1&dagger;</sup>, Junlong Cheng<sup>1&dagger;</sup>
 
 <sup>1</sup>Sichuan University &nbsp;&nbsp;
 <sup>2</sup>Xinjiang University &nbsp;&nbsp;
 <sup>3</sup>Fuzhou University &nbsp;&nbsp;
 <sup>4</sup>Alibaba DAMO Academy
 
-<sup>*</sup> Equal contribution &nbsp;&nbsp; <sup>&dagger;</sup> Corresponding authors
 
 **CVPR 2026**
 
@@ -83,25 +82,6 @@ pip install -r requirements.txt
 The implementation uses PyTorch, TIMM, Transformers, MONAI, OpenCV, and common
 scientific Python packages.
 
-## Data Preparation
-
-The paper uses **MedSeg-HQ**, a curated multimodal medical segmentation
-collection. Dataset files are not included in this repository.
-
-Each dataset used by the loader should be organized as follows:
-
-```text
-dataset/
-`-- <DATASET_NAME>/
-    |-- dataset.json
-    |-- image/
-    |-- label/
-    `-- imask/
-```
-
-The `dataset.json` file provides class definitions and references to the
-training and testing samples. Multiple datasets can be supplied with
-`--dataset_list`.
 
 ## Checkpoint
 
@@ -191,24 +171,6 @@ python train.py \
   --gpu_ids 0 1 2 3 4 5 6 7
 ```
 
-## Repository Structure
-
-```text
-SegMoTE/
-|-- checkpoints/
-|-- dataloaders/
-|-- figures/
-|-- segment_anything/
-|-- tools/
-|   `-- release_checkpoint.py
-|-- checkpoint_utils.py
-|-- data_loader.py
-|-- model.py
-|-- test.py
-|-- train.py
-|-- requirements.txt
-`-- utils.py
-```
 
 ## Citation
 
@@ -223,8 +185,3 @@ The BibTeX entry will be updated after the public paper record is available:
 }
 ```
 
-## Acknowledgements
-
-This repository contains components derived from the Segment Anything Model
-(SAM). Please follow the applicable upstream license terms when distributing
-or modifying those components.
