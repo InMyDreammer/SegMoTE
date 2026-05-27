@@ -2,8 +2,7 @@
 
 # SegMoTE: Token-Level Mixture of Experts for Medical Image Segmentation
 
-**Yujie Lu<sup>1*</sup>, Jingwen Li<sup>2*</sup>, Sibo Ju<sup>3</sup>, Yanzhou Su<sup>4</sup>,  
-He Yao<sup>1</sup>, Yisong Liu<sup>1</sup>, Min Zhu<sup>1&dagger;</sup>, Junlong Cheng<sup>1&dagger;</sup>
+**Yujie Lu<sup>1*</sup>, Jingwen Li<sup>2*</sup>, Sibo Ju<sup>3</sup>, Yanzhou Su<sup>4</sup>, He Yao<sup>1</sup>, Yisong Liu<sup>1</sup>, Min Zhu<sup>1&dagger;</sup>, Junlong Cheng<sup>1&dagger;</sup>
 
 <sup>1</sup>Sichuan University &nbsp;&nbsp;
 <sup>2</sup>Xinjiang University &nbsp;&nbsp;
@@ -11,7 +10,7 @@ He Yao<sup>1</sup>, Yisong Liu<sup>1</sup>, Min Zhu<sup>1&dagger;</sup>, Junlong
 <sup>4</sup>Alibaba DAMO Academy
 
 
-**CVPR 2026**
+**CVPR 2026 (Oral)**
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/2602.19213)
 [![Code](https://img.shields.io/badge/Code-PyTorch-blue.svg)](#installation)
