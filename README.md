@@ -105,20 +105,7 @@ segmote: <BAIDU_NETDISK_EXTRACTION_CODE>
 ```
 
 After downloading, place both checkpoint files in the `checkpoints/`
-directory. The SegMoTE inference artifact contains only `model_state_dict`;
-training metadata such as epoch counters and optimizer state has been removed.
-As a result, evaluation loads the model without displaying stored training
-epochs.
-
-The checkpoint files are large and are intentionally excluded from the source
-repository.
-
-Legacy research checkpoints can also be converted to the public parameter
-naming scheme:
-
-```bash
-python tools/release_checkpoint.py /path/to/legacy.pth checkpoints/segmote_best.pth
-```
+directory. 
 
 ## Evaluation
 
