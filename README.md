@@ -1,13 +1,6 @@
 # SegMoTE
 
-Official implementation staging directory for **SegMoTE**, a mixture-of-experts
-model for interactive medical image segmentation.
-
-This release directory contains the training and evaluation code derived from
-the research implementation. Large training data, intermediate visualizations,
-private filesystem paths, duplicate baseline copies, and experimental analysis
-scripts are deliberately excluded.
-
+Official implementation staging directory for SegMoTE: Token-Level Mixture of Experts for Medical Image Segmentation
 
 ## Environment
 
