@@ -1,4 +1,4 @@
-# SegMoTE
+# SegMoTE: Token-Level Mixture of Experts for Medical Image Segmentation
 
 Official implementation staging directory for SegMoTE: Token-Level Mixture of Experts for Medical Image Segmentation
 
