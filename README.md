@@ -101,7 +101,7 @@ Download the checkpoints from Baidu Netdisk:
 
 ```text
 sam_b: https://pan.baidu.com/s/1HcmqPiwpWgnYr4CMf6Y9Pg  Password：eank
-segmote: <BAIDU_NETDISK_EXTRACTION_CODE>
+segmote: https://pan.baidu.com/s/1gQG6LB_h1WqI54btGwrUBw  Password：a3hh
 ```
 
 After downloading, place both checkpoint files in the `checkpoints/`
@@ -115,22 +115,10 @@ Evaluate the released checkpoint on a dataset with bounding-box prompts:
 python test.py \
   --data_dir dataset \
   --dataset_list BTCV \
-  --sam_checkpoint checkpoints/IMISNet-B.pth \
-  --pretrain_path checkpoints/segmote_best.pth \
+  --sam_checkpoint checkpoints/sam_b.pth \
+  --pretrain_path checkpoints/segmote.pth \
   --prompt_mode bboxes \
   --output_dir outputs/BTCV
-```
-
-Other supported prompt modes are `points` and `text`:
-
-```bash
-python test.py \
-  --data_dir dataset \
-  --dataset_list BTCV \
-  --sam_checkpoint checkpoints/IMISNet-B.pth \
-  --pretrain_path checkpoints/segmote_best.pth \
-  --prompt_mode points \
-  --output_dir outputs/BTCV_points
 ```
 
 ## Training
@@ -141,7 +129,7 @@ Train SegMoTE from the base initialization checkpoint:
 python train.py \
   --data_dir dataset \
   --dataset_list BTCV \
-  --sam_checkpoint checkpoints/IMISNet-B.pth \
+  --sam_checkpoint checkpoints/sam_b.pth \
   --task_name segmote_train
 ```
 
@@ -151,7 +139,7 @@ For distributed training on multiple GPUs:
 python train.py \
   --data_dir dataset \
   --dataset_list BTCV \
-  --sam_checkpoint checkpoints/IMISNet-B.pth \
+  --sam_checkpoint checkpoints/sam_b.pth \
   --task_name segmote_train \
   --dist \
   --multi_gpu \
