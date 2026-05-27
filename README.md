@@ -8,21 +8,6 @@ the research implementation. Large training data, intermediate visualizations,
 private filesystem paths, duplicate baseline copies, and experimental analysis
 scripts are deliberately excluded.
 
-## Repository Layout
-
-```text
-SegMoTE/
-|-- checkpoints/                 # Put downloaded weights here (ignored by Git)
-|-- dataloaders/
-|-- segment_anything/            # SegMoTE encoder/prompt/decoder implementation
-|-- tools/release_checkpoint.py  # Legacy checkpoint name converter
-|-- checkpoint_utils.py          # Runtime compatibility for legacy weights
-|-- data_loader.py
-|-- model.py
-|-- test.py
-|-- train.py
-`-- utils.py
-```
 
 ## Environment
 
@@ -69,8 +54,10 @@ desired `--gpu_ids`.
 
 ## Citation And License
 
-Add the final SegMoTE paper citation, checkpoint download URL, dataset access
-instructions, and the intended open-source license before publishing this
-directory publicly. The `segment_anything`-derived components retain their
-upstream copyright headers and must be distributed consistently with their
-applicable license terms.
+```bibtex
+@article{lu2026segmote,
+  title={SegMoTE: Token-Level Mixture of Experts for Medical Image Segmentation},
+  author={Lu, Yujie and Li, Jingwen and Ju, Sibo and Su, Yanzhou and Liu, Yisong and Zhu, Min and Cheng, Junlong and others},
+  journal={arXiv preprint arXiv:2602.19213},
+  year={2026}
+}
