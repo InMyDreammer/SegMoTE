@@ -15,7 +15,7 @@ He Yao<sup>1</sup>, Yisong Liu<sup>1</sup>, Min Zhu<sup>1&dagger;</sup>, Junlong
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/2602.19213)
 [![Code](https://img.shields.io/badge/Code-PyTorch-blue.svg)](#installation)
-[![Model](https://img.shields.io/badge/Model-Coming%20Soon-orange.svg)](#checkpoint)
+[![Model](https://img.shields.io/badge/Model-Download-orange.svg)](#checkpoint)
 
 </div>
 
