@@ -94,14 +94,14 @@ checkpoints/segmote.pth
 
 | Checkpoint | Usage |
 | --- | --- |
-| `IMISNet-B.pth` | Base initialization checkpoint loaded with `--sam_checkpoint` before loading SegMoTE weights. |
-| `segmote_best.pth` | SegMoTE inference checkpoint loaded with `--pretrain_path`. |
+| `sam_b.pth` | Base initialization checkpoint loaded with `--sam_checkpoint` before loading SegMoTE weights. |
+| `segmote.pth` | SegMoTE inference checkpoint loaded with `--pretrain_path`. |
 
 Download the checkpoints from Baidu Netdisk:
 
 ```text
-Link: [<BAIDU_NETDISK_DOWNLOAD_LINK>](https://pan.baidu.com/s/1HcmqPiwpWgnYr4CMf6Y9Pg)   Password：eank
-Extraction code: <BAIDU_NETDISK_EXTRACTION_CODE>
+sam_b: https://pan.baidu.com/s/1HcmqPiwpWgnYr4CMf6Y9Pg  Password：eank
+segmote: <BAIDU_NETDISK_EXTRACTION_CODE>
 ```
 
 After downloading, place both checkpoint files in the `checkpoints/`
