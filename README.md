@@ -151,11 +151,11 @@ python train.py \
 The BibTeX entry will be updated after the public paper record is available:
 
 ```bibtex
-@inproceedings{lu2026segmote,
-  title     = {SegMoTE: Token-Level Mixture of Experts for Medical Image Segmentation},
-  author    = {Lu, Yujie and Li, Jingwen and Ju, Sibo and Su, Yanzhou and Yao, He and Liu, Yisong and Zhu, Min and Cheng, Junlong},
-  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-  year      = {2026}
+@article{lu2026segmote,
+  title={SegMoTE: Token-Level Mixture of Experts for Medical Image Segmentation},
+  author={Lu, Yujie and Li, Jingwen and Ju, Sibo and Su, Yanzhou and Liu, Yisong and Zhu, Min and Cheng, Junlong and others},
+  journal={arXiv preprint arXiv:2602.19213},
+  year={2026}
 }
 ```
 
