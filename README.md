@@ -66,13 +66,6 @@ python train.py \
 For distributed execution, additionally pass `--dist --multi_gpu` and the
 desired `--gpu_ids`.
 
-## Naming Compatibility
-
-The research workspace originated from an earlier interactive segmentation
-baseline. The released model API uses `SegMoTE` and `SegMoTEPredictor`, and
-the decoder's learnable MoE output branch uses `expert_*` identifiers. Legacy
-names occur only in the compatibility map required to load previously trained
-weights.
 
 ## Citation And License
 
