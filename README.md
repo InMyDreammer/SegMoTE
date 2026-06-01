@@ -52,7 +52,7 @@ bounding-box, and text prompts while retaining an efficient inference path.
 
 ## Highlights
 
-- **Token-level expert routing:** SegMoTE dynamically activates expert tokens
+- **Token-level expert routing:** SegMoTE activates expert tokens
   for modality- and task-adaptive segmentation.
 - **Progressive prompt tokenization:** Feature-conditioned prompt tokens
   support automatic segmentation for suitable binary foreground-background
