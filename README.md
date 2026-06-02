@@ -100,7 +100,7 @@ Download the checkpoints from Baidu Netdisk:
 
 ```text
 sam_b: https://pan.baidu.com/s/1HcmqPiwpWgnYr4CMf6Y9Pg  Password：eank
-segmote: https://pan.baidu.com/s/1gQG6LB_h1WqI54btGwrUBw  Password：a3hh
+segmote: https://pan.baidu.com/s/1tzlOv3YSU-9s6Gaw4pCF6g  Password：wja3
 ```
 
 After downloading, place both checkpoint files in the `checkpoints/`
