@@ -240,55 +240,55 @@ class TwoWayAttentionBlock(nn.Module):
         return prob
 
 
-    def noisy_top_k_gating_token(self, x, test_mode,noise_epsilon=1e-2):
-
+    def noisy_top_k_gating_token(self, x, test_mode, noise_epsilon=1e-2):
 
         B, T, D = x.shape
         gates_list = []
         top_k_logits_list = []
         softmax_logits_list = []
         top_k_indices_list = []
-
+    
         for i in range(B):
             x_i = x[i]
-
-
+    
             clean_logits = x_i @ self.w_gate_token
-
-            if self.noisy_gating and test_mode==False:
+    
+            if self.noisy_gating and test_mode == False:
                 raw_noise_stddev = x_i @ self.w_noise_token
                 noise_stddev = self.softplus(raw_noise_stddev) + noise_epsilon
                 noisy_logits = clean_logits + torch.randn_like(clean_logits) * noise_stddev
                 logits = noisy_logits
             else:
                 logits = clean_logits
-
+    
             top_logits, top_indices = logits.topk(min(self.k + 1, self.num_experts), dim=1)
             top_k_logits = top_logits[:, :self.k]
             top_k_indices = top_indices[:, :self.k]
-            top_k_gates = self.softmax(top_k_logits)
-
+    
+            probs = self.softmax(logits)
+            top_k_gates = torch.gather(probs, 1, top_k_indices)
+    
             zeros = torch.zeros_like(logits)
-            gates = zeros.scatter(1, top_k_indices, top_k_gates)
-
+            hard_gates = zeros.scatter(1, top_k_indices, 1.0)
+            soft_gates = zeros.scatter(1, top_k_indices, top_k_gates)
+            gates = hard_gates - soft_gates.detach() + soft_gates
+    
             gates_list.append(gates)
             top_k_logits_list.append(top_k_logits)
-            softmax_logits_list.append(self.softmax(logits))
+            softmax_logits_list.append(probs)
             top_k_indices_list.append(top_k_indices)
-
+    
         gates = torch.stack(gates_list, dim=0)
         top_k_logits = torch.stack(top_k_logits_list, dim=0)
         logits = torch.stack(softmax_logits_list, dim=0)
         top_k_indices = torch.stack(top_k_indices_list, dim=0)
-
-
-        if self.noisy_gating and self.k < self.num_experts and test_mode==False:
-
+    
+        if self.noisy_gating and self.k < self.num_experts and test_mode == False:
             load = gates.sum(dim=(0, 1))
         else:
             load = self._gates_to_load(gates.view(-1, self.num_experts))
-
-        return gates, load, logits, top_k_logits,top_k_indices
+    
+        return gates, load, logits, top_k_logits, top_k_indices
 
 
     def forward(
