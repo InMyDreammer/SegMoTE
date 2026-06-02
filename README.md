@@ -106,6 +106,12 @@ sam_b: https://pan.baidu.com/s/1HcmqPiwpWgnYr4CMf6Y9Pg  Password：eank
 segmote: https://pan.baidu.com/s/1tzlOv3YSU-9s6Gaw4pCF6g  Password：wja3
 ```
 
+Download the checkpoints from Huggingface:
+
+```text
+https://huggingface.co/yujielu/SegMoTE/tree/main
+```
+
 After downloading, place both checkpoint files in the `checkpoints/`
 directory. 
 
