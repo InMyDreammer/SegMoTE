@@ -12,9 +12,12 @@
 
 **CVPR 2026 (Oral)**
 
+
 [![Paper](https://img.shields.io/badge/Paper-arXiv-b31b1b.svg)](https://arxiv.org/abs/2602.19213)
 [![Code](https://img.shields.io/badge/Code-PyTorch-blue.svg)](#installation)
 [![Model](https://img.shields.io/badge/Model-Download-orange.svg)](#checkpoint)
+[![HuggingFace](https://img.shields.io/badge/HuggingFace-SegMoTE-yellow.svg)](https://huggingface.co/yujielu/SegMoTE/tree/main)
+
 
 </div>
 
